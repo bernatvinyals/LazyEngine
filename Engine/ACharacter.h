@@ -33,11 +33,6 @@ public:
     void SetVelocity(float pVel) { m_velocity = pVel; };
     float GetVelocity() { return m_velocity; }
 
-    //Prevent player to go further based on check
-    /*!
-        \param Input check form CheckOuterColison()
-    */
-    void PreventOutter(int checkResult);
 
     virtual void Update() override;
 
