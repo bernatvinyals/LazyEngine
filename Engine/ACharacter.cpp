@@ -53,15 +53,6 @@ void ACharacter::ChangeAnimationFrame()
 
 void ACharacter::Render()
 {
-	/*
-	SDL_Rect r, rectAux;
-	r.x = m_rect.x;
-	r.y = m_rect.y;
-	rectAux.h = m_a_Sprite_Height;
-	rectAux.w = m_a_Sprite_Width;
-	rectAux.x = m_a_Sprite_Width * m_frame;
-	rectAux.y = m_a_Sprite_Height * m_animtionRow;
-	*/
 	Video::getInstance()->renderGraphic(m_image,
 		m_rect.x,
 		m_rect.y,

@@ -30,3 +30,13 @@
 *.exe
 *.out
 *.app
+*.recipe
+*.ilk
+*.pdb
+*.tlog
+*.log
+x64/Debug/SDL First.vcxproj.FileListAbsolute.txt
+*.idb
+.vs/LazyEngineSolution/v16/.suo
+*.db
+*.ipch
