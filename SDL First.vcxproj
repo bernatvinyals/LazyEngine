@@ -97,6 +97,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>SDL2main.lib;SDL2_mixer.lib;SDL2.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -125,7 +126,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>SDL2main.lib;SDL2.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2main.lib;SDL2_mixer.lib;SDL2.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -146,20 +147,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Input.cpp" />
-    <ClCompile Include="InputGamepad.cpp" />
+    <ClCompile Include="Engine\ACharacter.cpp" />
+    <ClCompile Include="Engine\Actor.cpp" />
+    <ClCompile Include="Engine\Input.cpp" />
+    <ClCompile Include="Engine\InputGamepad.cpp" />
+    <ClCompile Include="Engine\KeyboardInfo.cpp" />
+    <ClCompile Include="Engine\ResourceManager.cpp" />
+    <ClCompile Include="Engine\SoundManager.cpp" />
+    <ClCompile Include="Engine\Video.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Actor.cpp" />
-    <ClCompile Include="ResourceManager.cpp" />
-    <ClCompile Include="Video.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Globals.h" />
-    <ClInclude Include="Actor.h" />
-    <ClInclude Include="Input.h" />
-    <ClInclude Include="InputGamepad.h" />
-    <ClInclude Include="ResourceManager.h" />
-    <ClInclude Include="Video.h" />
+    <ClInclude Include="Engine\ACharacter.h" />
+    <ClInclude Include="Engine\Actor.h" />
+    <ClInclude Include="Engine\Globals.h" />
+    <ClInclude Include="Engine\Input.h" />
+    <ClInclude Include="Engine\InputGamepad.h" />
+    <ClInclude Include="Engine\KeyboardInfo.h" />
+    <ClInclude Include="Engine\PlayerDirections.h" />
+    <ClInclude Include="Engine\ResourceManager.h" />
+    <ClInclude Include="Engine\SoundManager.h" />
+    <ClInclude Include="Engine\Video.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
